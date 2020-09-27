@@ -80,7 +80,21 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let finalArray = [];
+  arr.forEach((item, index) => {
+    if(item % 3 === 0){
+      if(item % 5 === 0){
+        finalArray.push('Fizz Buzz'); // mod 3 and 5
+      } else {
+        finalArray.push('Fizz'); // only mod 3
+      }
+    } else if (item % 5 === 0){
+      finalArray.push('Buzz'); // only mod 5
+    } else {
+      finalArray.push(item);
+    }
+  });
+  return finalArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
