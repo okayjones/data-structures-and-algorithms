@@ -50,7 +50,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /\b[A-Z]\w*/g;
+  return str.match(regex) ? str.match(regex) : [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +61,6 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
