@@ -111,9 +111,11 @@ const people = [
   new Person('Stan', 'Seattle', 67),
 ];
 
-const sortPeople = (arr) => {
-  // Solution code here...
-};
+const sortPeople = (arr) => arr.sort((a,b) => {
+  if (a.lastName < b.lastName) return -1;
+  if (a.lastName > b.lastName) return 1;
+  return 0;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -125,9 +127,13 @@ If two people share the same last name, alphabetize on their first name.
 If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
 
-const sortPeopleBetter = (arr) => {
-  // Solution code here...
-};
+const sortPeopleBetter = (arr) => arr.sort((a,b) => {
+  if (a.lastName < b.lastName) return -1;
+  if (a.lastName > b.lastName) return 1;
+  if (a.firstName < b.firstName) return -1;
+  if (a.firstName > b.firstName) return 1;
+  return (a.age - b.age);
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -151,9 +157,17 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = (arr) => {
-  // Solution code here...
-};
+const sortMeetingsByDay = (arr) => arr.sort((a,b) => {
+  const days = {
+    'Monday' :1,
+    'Tuesday':2,
+    'Wednesday':3,
+    'Thursday':4,
+    'Friday':5
+  };
+
+  return days[a.dayOfWeek] - days[b.dayOfWeek];
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -165,9 +179,19 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
-const sortSchedule = (arr) => {
-  // Solution code here...
-};
+const sortSchedule = (arr) => arr.sort((a,b) => {
+  const days = {
+    'Monday' :1,
+    'Tuesday':2,
+    'Wednesday':3,
+    'Thursday':4,
+    'Friday':5
+  };
+
+  if (days[a.dayOfWeek] < days[b.dayOfWeek]) return -1;
+  if (days[a.dayOfWeek] > days[b.dayOfWeek]) return 1;
+  return (a.end - a.start) - (b.end - b.start);
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 12 - Stretch Goal
@@ -183,7 +207,7 @@ $ = createSnippetWithJQuery(`
 `);
 
 const addPearClass = () => {
-  // Solution code here...
+  $('li:nth-child(3)').addClass('pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -281,7 +305,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
@@ -302,7 +326,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
@@ -312,7 +336,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
@@ -325,7 +349,7 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-xdescribe('Testing challenge 12', () => {
+describe('Testing challenge 12', () => {
   test('It should add a class of pear to the thrid li', () => {
     addPearClass();
     expect($('li:nth-child(3)').hasClass('pear')).toBe(true);
