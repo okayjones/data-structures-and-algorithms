@@ -104,9 +104,6 @@ const getHouses = (arr) => {
   for (let person in arr){
     houses.push(arr[person].house);
   }
-  // arr.forEach(person => {
-  //   houses.push(person.house);
-  // });
   return houses;
 };
 
@@ -126,7 +123,6 @@ const hasChildrenValues = (arr, character) => {
   for (let person in arr){
     if (arr[person].name === character){
       return Object.values(arr[person].children).length > 0;
-      break;
     }
   };
 };
@@ -143,7 +139,6 @@ const hasChildrenEntries = (arr, character) => {
   for (let person in arr){
     if (arr[person].name === character){
       return Object.entries(arr[person].children).length > 0;
-      break;
     }
   };
 };
@@ -157,10 +152,8 @@ Write a function named totalCharacters that takes in an array and returns the nu
 const totalCharacters = (arr) => {
   let size = 0;
   arr.forEach(person => {
-    size += 1 + person.children.length; //for the children
-    if (person.spouse) {
-      size ++; // for the spouse
-    }
+    size += 1 + person.children.length;
+    if (person.spouse) size ++;
   });
   return size;
 };
@@ -179,9 +172,7 @@ const houseSize = (arr) => {
   const sizes = [];
   arr.forEach(person => {
     let size = 1 + person.children.length;
-    if (person.spouse) {
-      size ++;
-    }
+    if (person.spouse) size++;
     sizes.push({
       house: person.house,
       members: size
