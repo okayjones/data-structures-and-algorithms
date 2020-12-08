@@ -1,2 +1,2 @@
-def array_reverse(arr):
+def reverseArray(arr):
     return arr[::-1]
