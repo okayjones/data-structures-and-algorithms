@@ -29,3 +29,9 @@ def test_array_shift_odd_str():
     expected = ['A','B','C','D','E','F']
     assert actual == expected
     
+def test_array_shift_empty():
+    arr = []
+    n = 1
+    actual = array_shift(arr, n)
+    expected = "Invalid Input"
+    assert actual == expected
