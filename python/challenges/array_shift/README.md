@@ -1,4 +1,4 @@
-# Challenge Summary
+# Array Shift
 
 Insert value at midpoint of an array.
 
