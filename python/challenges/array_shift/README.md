@@ -1,10 +1,15 @@
 # Challenge Summary
-<!-- Short summary or background information -->
+
+Insert value at midpoint of an array.
 
 ## Challenge Description
-<!-- Description of the challenge -->
+
+Insert a value at the midpoint of an array. If the array has an odd number of item, the midpoint is considered the index to the right. No built in methods used.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Slicing was used to shfit the array. O(1).
 
 ## Solution
+
+![Whiteboard Image](../../../assets/array-shift.jpg)
