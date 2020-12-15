@@ -8,7 +8,7 @@ Perform a binary search on a list without using built in python methods. Functio
 
 ## Approach & Efficiency
 
-Iteratively performed binary search on the list. 
+Iteratively performed binary search on the list.
 Space: O(1)
 Time: O(log n)
 
