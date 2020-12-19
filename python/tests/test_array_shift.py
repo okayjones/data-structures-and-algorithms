@@ -1,5 +1,5 @@
-from array_shift import __version__
-from array_shift.array_shift import array_shift
+from challenges.array_shift import __version__
+from challenges.array_shift.array_shift import array_shift
 
 
 def test_version():
