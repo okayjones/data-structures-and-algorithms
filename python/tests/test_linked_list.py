@@ -54,3 +54,12 @@ def test_linked_list_includes_true():
     actual = ll.includes(value)
     expected = True
     assert actual == expected
+
+def test_linked_list_str():
+    ll = LinkedList()
+    ll.insert('c')
+    ll.insert('b')
+    ll.insert('a')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> NULL"
+    assert actual == expected

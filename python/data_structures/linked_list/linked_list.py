@@ -27,3 +27,14 @@ class LinkedList:
 
         return False
 
+    def __str__(self):
+        current = self.head
+        string = ''
+
+        while current is not None:
+            string += f"{{ {current.value} }} -> "
+
+            current = current.next
+
+        string += 'NULL'
+        return string
