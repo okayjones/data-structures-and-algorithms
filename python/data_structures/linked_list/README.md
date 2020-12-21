@@ -1,11 +1,18 @@
 # Singly Linked List
-<!-- Short summary or background information -->
+
+Linked List implementation with Node and LinkedList classes
 
 ## Challenge
-<!-- Description of the challenge -->
+
+Create a Node class and Linked List class. The Linked List has has insert and inclues methods.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+The Node and Linked List are both classes. The Node class contains a 'next' value, and the linked list class contains a head value. Together, these allow traversal through the list. Insert is O(1), while includes is O(n).
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
+
+LinkedList
+
+- `Insert`: Inserts a new Node with specified value to the head of the list.
+- `Includes`: Returns a boolean based on a specified value existing in the list.
