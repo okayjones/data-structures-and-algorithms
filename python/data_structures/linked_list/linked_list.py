@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, value, next:Node=None):
+    def __init__(self, value, next=None):
         """Constructor for Node class
 
         Args:
@@ -11,7 +11,7 @@ class Node:
 
 
 class LinkedList:
-    def __init__(self, head:Node=None):
+    def __init__(self, head=None):
         """Constructor for LinkedList
 
         Args:
