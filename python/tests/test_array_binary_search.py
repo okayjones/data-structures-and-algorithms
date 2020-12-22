@@ -1,4 +1,4 @@
-from array_binary_search.array_binary_search import binary_search
+from challenges.array_binary_search.array_binary_search import binary_search
 
 
 def test_binary_search_even_left():
