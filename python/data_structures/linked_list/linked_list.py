@@ -19,6 +19,23 @@ class LinkedList:
         """
         self.head = head
 
+    def __str__(self) -> str:
+        """String representation of the list
+
+        Returns:
+            str: description
+        """
+        current = self.head
+        string = ""
+
+        while current is not None:
+            string += f"{{ {current.value} }} -> "
+
+            current = current.next
+
+        string += "NULL"
+        return string
+
     def insert(self, value):
         """Insert a value into the head of the list.
 
@@ -46,24 +63,73 @@ class LinkedList:
         while current is not None:
             if current.value == value:
                 return True
-            
+
             current = current.next
 
         return False
 
-    def __str__(self) -> str:
-        """String representation of the list
+    def append(self, value):
+        """appends a new node to the end of the list
 
-        Returns:
-            str: description
+        Args:
+            value (any): value to append
         """
+        node = Node(value)
         current = self.head
-        string = ''
 
-        while current is not None:
-            string += f"{{ {current.value} }} -> "
+        if self.head is None:
+            self.head = node
+            return
 
+        while current.next is not None:
             current = current.next
 
-        string += 'NULL'
-        return string
+        current.next = node
+
+    def insertBefore(self, value, newVal):
+        """Inserts newVal into the list, before a specified value. 
+
+        Args:
+            value (any): value to insert before
+            newVal (any): value to insert
+
+        Raises:
+            Exception: raised if value not present
+        """
+        current = self.head
+
+        if current.value is value:
+            self.insert(newVal)
+            return
+            
+        while current is not None:
+            if current.next.value is value:
+                node = Node(newVal)
+                node.next = current.next
+                current.next = node
+                return
+            current = current.next
+
+        raise Exception(f"Value {{ {value} }} not present in list")
+
+    def insertAfter(self, value, newVal):
+        """Inserts newVal into the list, after a specified value. 
+
+        Args:
+            value (any): value to insert after
+            newVal (any): value to insert
+
+        Raises:
+            Exception: raised if value not present
+        """
+        current = self.head
+
+        while current is not None:
+            if current.value is value:
+                node = Node(newVal)
+                node.next = current.next
+                current.next = node
+                return
+            current = current.next
+
+        raise Exception(f"Value {{ {value} }} not present in list")
