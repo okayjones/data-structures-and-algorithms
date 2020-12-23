@@ -72,7 +72,7 @@ class LinkedList:
         """appends a new node to the end of the list
 
         Args:
-            value (any): [description]
+            value (any): value to append
         """
         node = Node(value)
         current = self.head
@@ -87,15 +87,46 @@ class LinkedList:
         current.next = node
 
     def insertBefore(self, value, newVal):
-        node = Node(newVal)
+        """Inserts newVal into the list, before a specified value. 
+
+        Args:
+            value (any): value to insert before
+            newVal (any): value to insert
+
+        Raises:
+            Exception: raised if value not present
+        """
         current = self.head
 
         if current.value is value:
             self.insert(newVal)
             return
-
-        while current.next is not None:
+            
+        while current is not None:
             if current.next.value is value:
+                node = Node(newVal)
+                node.next = current.next
+                current.next = node
+                return
+            current = current.next
+
+        raise Exception(f"Value {{ {value} }} not present in list")
+
+    def insertAfter(self, value, newVal):
+        """Inserts newVal into the list, after a specified value. 
+
+        Args:
+            value (any): value to insert after
+            newVal (any): value to insert
+
+        Raises:
+            Exception: raised if value not present
+        """
+        current = self.head
+
+        while current is not None:
+            if current.value is value:
+                node = Node(newVal)
                 node.next = current.next
                 current.next = node
                 return
