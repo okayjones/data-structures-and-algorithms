@@ -1,7 +1,7 @@
 from data_structures.linked_list import __version__
 from data_structures.linked_list.linked_list import LinkedList, Node
 
-
+# Code Challenge 05
 def test_version():
     assert __version__ == '0.1.0'
 
@@ -62,4 +62,26 @@ def test_linked_list_str():
     ll.insert('a')
     actual = str(ll)
     expected = "{ a } -> { b } -> { c } -> NULL"
+    assert actual == expected
+
+#Code Challenge 06
+def test_linked_list_append():
+    ll = LinkedList()
+    ll.insert('c')
+    ll.insert('b')
+    ll.insert('a')
+    ll.append('d')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> { d } -> NULL"
+    assert actual == expected
+
+def test_linked_list_append_multiple():
+    ll = LinkedList()
+    ll.insert('c')
+    ll.insert('b')
+    ll.insert('a')
+    ll.append('d')
+    ll.append('e')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> { d } -> { e } -> NULL"
     assert actual == expected

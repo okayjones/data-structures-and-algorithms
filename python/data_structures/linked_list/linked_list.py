@@ -68,3 +68,50 @@ class LinkedList:
 
         return False
 
+    def append(self, value):
+        """appends a new node to the end of the list
+
+        Args:
+            value (any): [description]
+        """
+        node = Node(value)
+        current = self.head
+
+        if self.head is None:
+            self.head = node
+            return
+        
+        while current.next is not None:
+            current = current.next
+
+        current.next = node
+
+    def insertBefore(self, value, newVal):
+        node = Node(newVal)
+        current = self.head
+
+        if current.value == value:
+            self.insert(newVal)
+            return
+            
+        while current.next is not None:
+            
+            if current.next.value is value:
+                node.next = current.next
+                current.next = node
+                return
+            else:
+                current = current.next
+        
+        raise ValueError
+            
+
+        
+
+ll = LinkedList()
+ll.insert(2)
+ll.insert(3)
+ll.insert(1)
+print(ll)
+ll.insertBefore(3, 5)
+print(ll)
