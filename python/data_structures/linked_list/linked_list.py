@@ -26,14 +26,14 @@ class LinkedList:
             str: description
         """
         current = self.head
-        string = ''
+        string = ""
 
         while current is not None:
             string += f"{{ {current.value} }} -> "
 
             current = current.next
 
-        string += 'NULL'
+        string += "NULL"
         return string
 
     def insert(self, value):
@@ -63,7 +63,7 @@ class LinkedList:
         while current is not None:
             if current.value == value:
                 return True
-            
+
             current = current.next
 
         return False
@@ -80,7 +80,7 @@ class LinkedList:
         if self.head is None:
             self.head = node
             return
-        
+
         while current.next is not None:
             current = current.next
 
@@ -90,28 +90,15 @@ class LinkedList:
         node = Node(newVal)
         current = self.head
 
-        if current.value == value:
+        if current.value is value:
             self.insert(newVal)
             return
-            
+
         while current.next is not None:
-            
             if current.next.value is value:
                 node.next = current.next
                 current.next = node
                 return
-            else:
-                current = current.next
-        
-        raise ValueError
-            
+            current = current.next
 
-        
-
-ll = LinkedList()
-ll.insert(2)
-ll.insert(3)
-ll.insert(1)
-print(ll)
-ll.insertBefore(3, 5)
-print(ll)
+        raise Exception(f"Value {{ {value} }} not present in list")
