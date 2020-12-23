@@ -133,3 +133,30 @@ class LinkedList:
             current = current.next
 
         raise Exception(f"Value {{ {value} }} not present in list")
+
+    def kthFromEnd(self, k:int):
+        """Returns the kth number from end in the list.
+
+        Args:
+            k (int): number from end
+
+        Raises:
+            Exception: out of bounds
+
+        Returns:
+            (any): value
+        """
+        current = self.head
+
+        list = []
+
+        while current is not None:
+            list.append(current) 
+            current = current.next
+
+        size = len(list)  
+        if k < size:
+            return list[size -k -1].value
+        
+        raise Exception()
+
