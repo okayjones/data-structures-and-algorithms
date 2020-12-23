@@ -16,3 +16,9 @@ LinkedList
 
 - `Insert`: Inserts a new Node with specified value to the head of the list.
 - `Includes`: Returns a boolean based on a specified value existing in the list.
+
+## Whiteboard
+
+![Whiteboard Image](../../assets/linkedlist_06.jpg)
+
+![Whiteboard Image](../../assets/linkedlist_07.jpg)

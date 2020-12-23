@@ -12,4 +12,4 @@ Index syntax was used to step through the array in reverse order.
 
 ## Solution
 
-![Whiteboard Image](../../../assets/array-reverse.jpg)
+![Whiteboard Image](../../assets/array-reverse.jpg)

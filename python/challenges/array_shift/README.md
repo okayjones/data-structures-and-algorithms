@@ -12,4 +12,4 @@ Slicing was used to shfit the array. O(1).
 
 ## Solution
 
-![Whiteboard Image](../../../assets/array-shift.jpg)
+![Whiteboard Image](../../assets/array-shift.jpg)

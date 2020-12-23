@@ -14,4 +14,4 @@ Time: O(log n)
 
 ## Solution
 
-![Whiteboard Image](../../../assets/binary_search.jpg)
+![Whiteboard Image](../../assets/binary_search.jpg)
