@@ -1,3 +1,4 @@
+import pytest
 from data_structures.linked_list.linked_list import LinkedList, Node
 
 # Code Challenge 05
@@ -117,4 +118,54 @@ def test_linked_list_insert_after_end():
     actual = str(ll)
     expected = "{ a } -> { b } -> { c } -> NULL"
     assert actual == expected
-    
+
+# Code Challenge 07
+def test_linked_list_kth_greater_than():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(8)
+    ll.append(2)
+    with pytest.raises(Exception):
+        ll.kthFromEnd(6)
+
+def test_linked_list_kth_equal_length():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(8)
+    ll.append(2)
+    with pytest.raises(Exception):
+        ll.kthFromEnd(4)
+
+def test_linked_list_kth_negative_int():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(8)
+    ll.append(2)
+    with pytest.raises(Exception):
+        ll.kthFromEnd(-4)
+
+def test_linked_list_kth_size_one_fail():
+    ll = LinkedList()
+    ll.append(1)
+    with pytest.raises(Exception):
+        ll.kthFromEnd(1)
+
+def test_linked_list_kth_size_one_pass():
+    ll = LinkedList()
+    ll.append(1)
+    actual = ll.kthFromEnd(0)
+    expected = 1
+    assert actual == expected
+
+def test_linked_list_kth_middle():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(8)
+    ll.append(2)
+    actual = ll.kthFromEnd(2)
+    expected = 3
+    assert actual == expected
