@@ -1,10 +1,6 @@
-from data_structures.linked_list import __version__
 from data_structures.linked_list.linked_list import LinkedList, Node
 
 # Code Challenge 05
-def test_version():
-    assert __version__ == '0.1.0'
-
 def test_linked_list_empty():
     ll = LinkedList()
     actual = ll.head
@@ -85,3 +81,40 @@ def test_linked_list_append_multiple():
     actual = str(ll)
     expected = "{ a } -> { b } -> { c } -> { d } -> { e } -> NULL"
     assert actual == expected
+
+def test_linked_list_insert_before_middle():
+    ll = LinkedList()
+    ll.append('a')
+    ll.append('c')
+    ll.insertBefore('c', 'b')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> NULL"
+    assert actual == expected
+
+def test_linked_list_insert_before_first():
+    ll = LinkedList()
+    ll.append('b')
+    ll.append('c')
+    ll.insertBefore('b', 'a')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> NULL"
+    assert actual == expected
+
+def test_linked_list_insert_after_middle():
+    ll = LinkedList()
+    ll.append('a')
+    ll.append('c')
+    ll.insertAfter('a', 'b')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> NULL"
+    assert actual == expected
+
+def test_linked_list_insert_after_end():
+    ll = LinkedList()
+    ll.append('a')
+    ll.append('b')
+    ll.insertAfter('b', 'c')
+    actual = str(ll)
+    expected = "{ a } -> { b } -> { c } -> NULL"
+    assert actual == expected
+    
