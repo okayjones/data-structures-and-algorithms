@@ -19,6 +19,23 @@ class LinkedList:
         """
         self.head = head
 
+    def __str__(self) -> str:
+        """String representation of the list
+
+        Returns:
+            str: description
+        """
+        current = self.head
+        string = ''
+
+        while current is not None:
+            string += f"{{ {current.value} }} -> "
+
+            current = current.next
+
+        string += 'NULL'
+        return string
+
     def insert(self, value):
         """Insert a value into the head of the list.
 
@@ -51,19 +68,3 @@ class LinkedList:
 
         return False
 
-    def __str__(self) -> str:
-        """String representation of the list
-
-        Returns:
-            str: description
-        """
-        current = self.head
-        string = ''
-
-        while current is not None:
-            string += f"{{ {current.value} }} -> "
-
-            current = current.next
-
-        string += 'NULL'
-        return string
