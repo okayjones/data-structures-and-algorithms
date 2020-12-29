@@ -28,7 +28,7 @@ class LinkedList:
         current = self.head
         string = ""
 
-        while current is not None:
+        while current:
             string += f"{{ {current.value} }} -> "
 
             current = current.next
@@ -44,7 +44,7 @@ class LinkedList:
         """
         node = Node(value)
 
-        if self.head is not None:
+        if self.head:
             node.next = self.head
 
         self.head = node
@@ -60,8 +60,8 @@ class LinkedList:
         """
         current = self.head
 
-        while current is not None:
-            if current.value == value:
+        while current:
+            if current.value is value:
                 return True
 
             current = current.next
@@ -77,11 +77,11 @@ class LinkedList:
         node = Node(value)
         current = self.head
 
-        if self.head is None:
+        if not self.head:
             self.head = node
             return
 
-        while current.next is not None:
+        while current.next:
             current = current.next
 
         current.next = node
@@ -102,10 +102,9 @@ class LinkedList:
             self.insert(newVal)
             return
             
-        while current is not None:
+        while current:
             if current.next.value is value:
-                node = Node(newVal)
-                node.next = current.next
+                node = Node(newVal, current.next)
                 current.next = node
                 return
             current = current.next
@@ -124,10 +123,9 @@ class LinkedList:
         """
         current = self.head
 
-        while current is not None:
+        while current:
             if current.value is value:
-                node = Node(newVal)
-                node.next = current.next
+                node = Node(newVal, current.next)
                 current.next = node
                 return
             current = current.next
@@ -150,7 +148,7 @@ class LinkedList:
 
         list = []
 
-        while current is not None:
+        while current:
             list.append(current) 
             current = current.next
 
@@ -159,4 +157,3 @@ class LinkedList:
             return list[size -k -1].value
         
         raise Exception()
-
