@@ -104,8 +104,7 @@ class LinkedList:
             
         while current is not None:
             if current.next.value is value:
-                node = Node(newVal)
-                node.next = current.next
+                node = Node(newVal, current.next)
                 current.next = node
                 return
             current = current.next
@@ -126,8 +125,7 @@ class LinkedList:
 
         while current is not None:
             if current.value is value:
-                node = Node(newVal)
-                node.next = current.next
+                node = Node(newVal, current.next)
                 current.next = node
                 return
             current = current.next
