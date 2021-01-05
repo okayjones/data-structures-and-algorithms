@@ -20,15 +20,12 @@ def zipLists(ll1, ll2):
         current1.next = current2
         current2.next = current1_next
 
-        # store last current in case shorter
-        last_current1 = current1.next
-
+        #if list1 ends, connect rest of list2 
+        if not current1_next:
+            current1.next.next = current2_next
+        
         # move current
         current1 = current1_next
         current2 = current2_next
-    
-        # link rest of ll2 if ll1 was shorter
-        if not current1:
-            last_current1.next = current2
     
     return ll1
