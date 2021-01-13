@@ -8,16 +8,17 @@ class Stack():
         self.top = top
 
     def push(self, value):
-        new = Node(value, self.top)
-        self.top = new
+        node = Node(value, self.top)
+        self.top = node
 
     def pop(self):
         if self.isEmpty():
             raise IndexError("Stack is empty")
         else:
-            value = self.top.value
+            node = self.top
             self.top = self.top.next
-            return value
+            node.next = None
+            return node.value
 
     def peek(self):
         if self.isEmpty():
@@ -26,4 +27,37 @@ class Stack():
             return self.top.value
 
     def isEmpty(self):
-        return True if not self.top else False
+        return self.top == None
+
+class Queue():
+    def __init__(self, front=None):
+        self.front = front
+        self.rear = None
+
+    def enqueue(self, value):
+        node = Node(value)
+
+        if self.isEmpty():
+            self.front = node
+            self.rear = node
+        else:    
+            self.rear.next = node
+            self.rear = node
+
+    def dequeue(self):
+        if self.isEmpty():
+            raise IndexError("Stack is empty")
+        else:
+            temp = self.front
+            self.front = self.front.next
+            temp.next = None
+            return temp.value
+
+    def peek(self):
+        if self.isEmpty():
+            raise IndexError("Queue is empty")
+        else:
+            return self.front.value
+
+    def isEmpty(self):
+        return self.front == None
