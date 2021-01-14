@@ -9,6 +9,7 @@
 3. [Array binary search](challenges/array_binary_search/README.md)
 4. [Linked List ZIP](challenges/ll_zip/README.md)
 5. [PseudoQueue](challenges/queue_with_stacks/README.md)
+6. [FIFO Animal Shelter](challenges/fifo_animal_shelter/README.md)
 
 ### Data Structures
 
