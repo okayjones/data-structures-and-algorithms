@@ -8,7 +8,9 @@
 2. [Array shift](challenges/array_shift/README.md)
 3. [Array binary search](challenges/array_binary_search/README.md)
 4. [Linked List ZIP](challenges/ll_zip/README.md)
+5. [PseudoQueue](challenges/queue_with_stacks/README.md)
 
 ### Data Structures
 
 1. [Linked List](data-structures/linked_list/README.md)
+2. [Stacks and Queues](data-structures/stacks_and_queues/README.md)
