@@ -1,4 +1,5 @@
 # Challenge Summary
+
 Animal Shelter class accepting and providing cats and dogs.
 
 ## Challenge Description
