@@ -1,11 +1,19 @@
 # Challenge Summary
-<!-- Short summary or background information -->
+Animal Shelter class accepting and providing cats and dogs.
 
 ## Challenge Description
-<!-- Description of the challenge -->
+
+Create an animal shelter class that hanndles cats and dogs in FIFO order.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+- Enqueue
+  - Space: O(1)
+  - Time: O(1)
+- Dequeue
+  - Space: O(1)
+  - Time: O(1)
+  
 ## Solution
-<!-- Embedded whiteboard image -->
+
+![Whiteboard Image](../../assets/challenge12.png)
