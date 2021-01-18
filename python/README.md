@@ -10,6 +10,7 @@
 4. [Linked List ZIP](challenges/ll_zip/README.md)
 5. [PseudoQueue](challenges/queue_with_stacks/README.md)
 6. [FIFO Animal Shelter](challenges/fifo_animal_shelter/README.md)
+7. [Multi-Bracket Validation](challenges/multi_bracket_validation/README.md)
 
 ### Data Structures
 
