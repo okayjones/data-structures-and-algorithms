@@ -1,11 +1,18 @@
 # Challenge Summary
-<!-- Short summary or background information -->
+
+Multi-bracket validation
 
 ## Challenge Description
-<!-- Description of the challenge -->
+
+Create a function that takes a string and returns a boolean that represents whether or not the brackets are balanced.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Using a list as a stack, the string is iterated through. Opening brackets are pushed onto the stack. When a closing bracket is encountered, a value is popped from the stack to compare against.
+
+Space: O(1)  
+Time: O(n)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+
+![Whiteboard Image](../../assets/challenge13.png)
