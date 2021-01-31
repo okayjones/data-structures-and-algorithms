@@ -1,14 +1,35 @@
 class Node:
+    """Simple Node class for a binary tree
+    """
     def __init__(self, value, left=None, right=None):
+        """Node constructor
+
+        Args:
+            value (any): value to assign to the node
+            left (Node, optional): Left node. Defaults to None.
+            right (Node, optional): Right node. Defaults to None.
+        """
         self.value = value
         self.left = left
         self.right = right
 
 class BinaryTree:
+    """Binary tree class
+    """
     def __init__(self, root=None):
+        """Binary tree constructor
+
+        Args:
+            root (Node, optional): Node to be assigned as root
+        """
         self.root = root
 
     def pre_order(self) -> list:
+        """Return a list of values in root >> left >> right order
+
+        Returns:
+            list: List of values
+        """
         result = []
         def traverse(root):
             result.append(root.value)
@@ -20,6 +41,11 @@ class BinaryTree:
         return result
 
     def in_order(self) -> list:
+        """Return a list of values in left >> root >> right order
+
+        Returns:
+            list: List of values
+        """
         result = []
         def traverse(root):
             if root.left:
@@ -31,6 +57,11 @@ class BinaryTree:
         return result
 
     def post_order(self) -> list:
+        """Return a list of values in left >> right >> root 
+
+        Returns:
+            list: List of values
+        """
         result = []
         def traverse(root):
             if root.left:
@@ -42,7 +73,14 @@ class BinaryTree:
         return result
 
 class BinarySearchTree(BinaryTree):
+    """Binary Search Tree class. Inherits from BinaryTree.
+    """
     def add(self, value):
+        """Add a value to the tree
+
+        Args:
+            value (any): value to add
+        """
         if not self.root:
             self.root = Node(value)
 
@@ -60,6 +98,14 @@ class BinarySearchTree(BinaryTree):
         add_helper(self.root)
 
     def contains(self, value):
+        """Checks if given value exists in the tree
+
+        Args:
+            value (any): value to check
+
+        Returns:
+            bool: True if value exists
+        """
         root = self.root
         while root:
             if root.value == value:
