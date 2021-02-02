@@ -11,6 +11,7 @@
 5. [PseudoQueue](challenges/queue_with_stacks/README.md)
 6. [FIFO Animal Shelter](challenges/fifo_animal_shelter/README.md)
 7. [Multi-Bracket Validation](challenges/multi_bracket_validation/README.md)
+8. [BN Max Value](data-structures/tree/README.md)
 
 ### Data Structures
 
