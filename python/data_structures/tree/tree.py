@@ -73,6 +73,11 @@ class BinaryTree:
         return result
 
     def find_maximum_value(self):
+        """Returns max value in tree
+
+        Returns:
+            any: max value
+        """
         max_value = self.root.value
         def traverse(root):
             nonlocal max_value
