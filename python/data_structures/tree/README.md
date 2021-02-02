@@ -19,8 +19,15 @@ BinaryTree
 - `pre_order()` - Returns an array of values, in root >> left >> right order
 - `in_order()` - Returns an array of values, in left >> root >> right order
 - `post_order()` - Returns an array of values, in left >> right >> root order
+- `find_maximum_value()` - Returns the largest value in the tree
 
 BinarySearchTree
 
 - `add(value)` - Adds value to the tree
 - `contains(value)` - Checks if value exists in the tree
+
+## Whiteboards
+
+Whiteboard for find_maximum_value
+
+![Whiteboard Image](../../assets/challenge16.png)
