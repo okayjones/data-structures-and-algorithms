@@ -49,6 +49,12 @@ def test_binary_tree_post_order(bn_tree):
     actual = bn_tree.post_order()
     assert actual == expected
 
+# find maximum value code challenge
+def test_binary_tree_maximum_value(bn_mixed_tree):
+    expected = 100
+    actual = bn_mixed_tree.find_maximum_value()
+    assert actual == expected
+
 # BST - Can add node to empty tree
 def test_binary_search_tree_add_empty():
     value = 5
@@ -123,4 +129,22 @@ def bst_tree():
     c.left = f
 
     return tree
-    
+
+@pytest.fixture
+def bn_mixed_tree():
+    tree = BinaryTree()
+    a = Node(6)
+    b = Node(75)
+    c = Node(34)
+    d = Node(12)
+    e = Node(1)
+    f = Node(100)
+
+    tree.root = a
+    a.left = b
+    a.right = c
+    b.left = d
+    b.right = e
+    c.left = f
+
+    return tree
