@@ -3,9 +3,22 @@ from challenges.fizz_buzz_tree.fizz_buzz_tree import fizz_buzz_tree
 from data_structures.tree.tree import Node, BinaryTree
 
 
-def test_fizz_buzz(tree, fb_tree):
+def test_fizz_buzz_tree(tree, fb_tree):
     actual = fizz_buzz_tree(tree).pre_order()
     expected = fb_tree.pre_order()
+    assert actual == expected
+
+
+def test_fizz_buzz_empty():
+    actual = fizz_buzz_tree(BinaryTree()).pre_order()
+    expected = []
+    assert actual == expected
+
+
+def test_fizz_buzz_one():
+    root = Node(15)
+    actual = fizz_buzz_tree(BinaryTree(root)).pre_order()
+    expected = ['FizzBuzz']
     assert actual == expected
 
 

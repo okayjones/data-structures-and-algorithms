@@ -15,7 +15,9 @@ def fizz_buzz_tree(tree):
             traverse(root.left)
         if root.right:
             traverse(root.right)
-    traverse(tree.root)
+    
+    if tree.root:
+        traverse(tree.root)
 
     return tree
 
