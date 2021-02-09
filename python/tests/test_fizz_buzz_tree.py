@@ -1,10 +1,11 @@
 import pytest
 from challenges.fizz_buzz_tree.fizz_buzz_tree import fizz_buzz_tree
-from data_structures.tree.tree import Node, BinaryTree
+from challenges.fizz_buzz_tree.fizz_buzz_tree import Node, BinaryTree
 
 
-def test_fizz_buzz_tree(tree, fb_tree):
-    actual = fizz_buzz_tree(tree).pre_order()
+def test_fizz_buzz(tree, fb_tree):
+    fizzed_tree = fizz_buzz_tree(tree)
+    actual = fizzed_tree.pre_order()
     expected = fb_tree.pre_order()
     assert actual == expected
 
