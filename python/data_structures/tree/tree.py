@@ -37,7 +37,8 @@ class BinaryTree:
                 traverse(root.left)
             if root.right:
                 traverse(root.right)
-        traverse(self.root)
+        if self.root:
+            traverse(self.root)
         return result
 
     def in_order(self) -> list:
@@ -53,7 +54,8 @@ class BinaryTree:
             result.append(root.value)
             if root.right:
                 traverse(root.right)
-        traverse(self.root)
+        if self.root:
+            traverse(self.root)
         return result
 
     def post_order(self) -> list:
@@ -69,7 +71,8 @@ class BinaryTree:
             if root.right:
                 traverse(root.right)
             result.append(root.value)
-        traverse(self.root)
+        if self.root:
+            traverse(self.root)
         return result
 
     def find_maximum_value(self):
@@ -87,7 +90,8 @@ class BinaryTree:
                 traverse(root.left)
             if root.right:
                 traverse(root.right)
-        traverse(self.root)
+        if self.root:
+            traverse(self.root)
         return max_value
 
 class BinarySearchTree(BinaryTree):
