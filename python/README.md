@@ -14,6 +14,7 @@
 8. [BN Max Value](data-structures/tree/README.md)
 9. [Breadth First Tree](challenges/breadth_first/README.md)
 10. [FizzBuzz Tree](challenges/fizz_buzz_tree/README.md)
+11. [Insertion Sort](challenges/insertion_sort/BLOG.md)
 
 ### Data Structures
 
