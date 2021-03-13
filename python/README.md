@@ -23,3 +23,4 @@
 1. [Linked List](data-structures/linked_list/README.md)
 2. [Stacks and Queues](data-structures/stacks_and_queues/README.md)
 3. [Trees](data-structures/tree/README.md)
+4. [Hash Tables](data-structures/hashtable/README.md)
