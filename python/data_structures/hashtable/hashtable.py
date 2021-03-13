@@ -15,8 +15,8 @@ class Hashtable:
         bucket = self._buckets[self._hash(key)]
         current = bucket.head
         while current:
-            if current.value[0] == key:
-                return current.value[1]
+            if current.data[0] == key:
+                return current.data[1]
             else:
                 current = current.next
 
@@ -24,7 +24,7 @@ class Hashtable:
         bucket = self._buckets[self._hash(key)]
         current = bucket.head
         while current:
-            if current.value[0] == key:
+            if current.data[0] == key:
                 return True
             else:
                 current = current.next
