@@ -51,3 +51,9 @@ def test_hashtable_collision():
     assert hashtable._hash("key") == hashtable._hash("yek")
     assert hashtable.get("key") == "value1"
     assert hashtable.get("yek") == "value2"
+
+
+def test_hashtable_contains():
+    hashtable = Hashtable()
+    hashtable.add("key", "value")
+    assert hashtable.contains("key") == True  
