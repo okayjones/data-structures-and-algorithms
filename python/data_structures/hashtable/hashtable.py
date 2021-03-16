@@ -1,7 +1,7 @@
 class Hashtable:
     def __init__(self, size=1024):
         self.size = size
-        self._buckets = [LinkedList()] * size
+        self._buckets = [LinkedList() for _ in range(size)]
 
     def _hash(self, key):
         total = sum([ord(ch) for ch in key])
