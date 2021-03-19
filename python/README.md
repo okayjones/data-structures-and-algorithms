@@ -18,6 +18,7 @@
 12. [Merge Sort](challenges/merge_sort/BLOG.md)
 13. [Quick Sort](challenges/quick_sort/BLOG.md)
 14. [Repeated Word](challenges/repeated_word/README.md)
+15. [Tree Intersection](challenges/tree_intersection/README.md)
 
 ### Data Structures
 
