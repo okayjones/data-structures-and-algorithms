@@ -1,11 +1,15 @@
 # Challenge Summary
-<!-- Short summary or background information -->
+
+Breadth first Graph traversal
 
 ## Challenge Description
-<!-- Description of the challenge -->
+
+Extend [Graph implementation](../../data_structures/graph/README.md) with a breadth first traversal method.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Both Space and Time are O(n)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+
+![breadth first graph](../../assets/breadth_first_graph.png)
