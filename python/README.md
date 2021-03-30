@@ -27,3 +27,4 @@
 2. [Stacks and Queues](data-structures/stacks_and_queues/README.md)
 3. [Trees](data-structures/tree/README.md)
 4. [Hash Tables](data-structures/hashtable/README.md)
+5. [Graph](data-structures/graph/README.md)
