@@ -4,19 +4,14 @@ from data_structures.graph.graph import Graph
 class Graph(Graph):
     def breadth_first(self, vertex):
         nodes = []
-        breadth = []
-        visited = set()
+        queue = [vertex]
 
-        breadth.append(vertex)
-        visited.add(vertex)
+        while queue:
+            current = queue.pop()
+            nodes.append(current)
 
-        while breadth:
-            front = breadth.pop()
-            nodes.append(front)
-
-            for child in self.get_neighbors(front):
-                if child.vertex not in visited:
-                    visited.add(child.vertex)
-                    breadth.append(child.vertex)
+            for neighbor in self.get_neighbors(current):
+                if neighbor.vertex not in nodes:
+                    queue.append(neighbor.vertex)
 
         return nodes
