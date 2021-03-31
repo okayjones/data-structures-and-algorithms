@@ -12,11 +12,34 @@ def test_empty_graph():
     assert actual_weight == expected_weight
 
 
-def test_metro_pandora(flights):
+def test_one_connection_true(flights):
     graph = flights["graph"]
     route = [flights["metroville"], flights["pandora"]]
     actual = get_edge(graph, route)
     expected = (True, 82)
+    assert actual == expected
+
+
+def test_two_connection_true(flights):
+    graph = flights["graph"]
+    route = [flights["arendelle"], flights["monstropolis"], flights["naboo"]]
+    actual = get_edge(graph, route)
+    expected = (True, 115)
+    assert actual == expected
+
+
+def test_one_connection_false(flights):
+    graph = flights["graph"]
+    route = [flights["naboo"], flights["pandora"]]
+    actual = get_edge(graph, route)
+    expected = (False, 0)
+
+
+def test_two_connection_false(flights):
+    graph = flights["graph"]
+    route = [flights["narnia"], flights["arendelle"], flights["naboo"]]
+    actual = get_edge(graph, route)
+    expected = (False, 0)
     assert actual == expected
 
 
