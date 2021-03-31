@@ -7,7 +7,7 @@ class Graph(Graph):
         queue = [vertex]
 
         while queue:
-            current = queue.pop()
+            current = queue.pop(0)
             nodes.append(current)
 
             for neighbor in self.get_neighbors(current):
