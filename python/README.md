@@ -19,7 +19,8 @@
 13. [Quick Sort](challenges/quick_sort/BLOG.md)
 14. [Repeated Word](challenges/repeated_word/README.md)
 15. [Tree Intersection](challenges/tree_intersection/README.md)
-16. [Hashtable Left Join](challneges/../challenges/left_join/README.md)
+16. [Hashtable Left Join](challenges/left_join/README.md)
+17. [Get Edge](challenges/get_edge/README.md)
 
 ### Data Structures
 
