@@ -21,6 +21,7 @@
 15. [Tree Intersection](challenges/tree_intersection/README.md)
 16. [Hashtable Left Join](challenges/left_join/README.md)
 17. [Get Edge](challenges/get_edge/README.md)
+18. [Depth First (Graph)](challenges/depth_first/README.md)
 
 ### Data Structures
 

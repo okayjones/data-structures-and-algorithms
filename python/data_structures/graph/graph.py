@@ -27,7 +27,7 @@ class Graph:
     def size(self):
         return len(self.self_adjacency_list)
 
-    def __str__(self):
+    def __repr__(self):
         return str(self._adjacency_list)
 
 
@@ -35,7 +35,7 @@ class Vertex:
     def __init__(self, value):
         self.value = value
 
-    def __str__(self):
+    def __repr__(self):
         return self.value
 
 
@@ -44,5 +44,5 @@ class Edge:
         self.vertex = vertex
         self.weight = weight
 
-    def __str__(self):
-        return f"({self.vertex}, {self.weight})"
+    def __repr__(self):
+        return f"<Edge(vertex={self.vertex}, weight={self.weight}>"
